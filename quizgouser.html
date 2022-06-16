@@ -968,8 +968,8 @@
       var Qs = null;
       var QArray = new Array();
       var ShowingAllQuestions = false;
-      var ShowAllQuestionsCaption = "Show all questions";
-      var ShowOneByOneCaption = "Show questions one by one";
+      var ShowAllQuestionsCaption = "Mostrar todas as questões";
+      var ShowOneByOneCaption = "Mostrar menos questões";
       var State = new Array();
       var Feedback = "";
       var TimeOver = false;
@@ -1667,7 +1667,7 @@
       <div class="ExerciseContainer">
         <div id="QNav" class="QuestionNavigation">
           <p style="text-align: right">
-            <button id="ShowMethodButton" class="FuncButton">
+            <button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">
               Mostrar todas as questões
             </button>
           </p>
