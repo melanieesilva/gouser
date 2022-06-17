@@ -6,653 +6,659 @@
 <meta name="dc:creator" content="MelanieSilva" />
 <meta name="dc:title" content="Quiz GoUser" />
 
-
-
-<title>
-Quiz GoUser
-</title>
-
-<!-- Made with executable version 7.0 Release 3 Build 0 -->
-
-<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
-
-
+<title>Quiz GoUser</title>
 
 <style>
-
-
-/* This is the CSS stylesheet used in the exercise. */
-/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
-
-/* BeginCorePageCSS */
-
-/* Made with executable version 7.0 Release 3 Build 0 */
-
-
-
-/* CSS variables for colours. */
-:root{
-	--strFontFace:       Geneva,Arial,sans-serif;
-	--strFontSize:       medium;
-	--strTextColor:      #000000;
-	--strTitleColor:     #000000;
-
-	--strFuncLightColor: #ffffff;
-	--strFuncShadeColor: #7f7f7f;
-	--strLinkColor:      #0000FF;
-	--strVLinkColor:     #0000CC;
-	
-	--strNavBarColor:    #000000;
-	--strNavLightColor:  #7f7f7f;
-	--strNavShadeColor:  #000000;
-	--strNavTextColor:   #ffffff;
-	
-	--strPageBGColor:    #C0C0C0;
-	--strExBGColor:      #FFFFFF;
-}
-
-body{
-	font-family: var(--strFontFace);
-	background-color: var(--strPageBGColor);
-	color: var(--strTextColor);
- 
-	margin-right: 5%;
-	margin-left: 5%;
-	font-size: var(--strFontSize);
-	padding-bottom: 0.5em;
-}
-
-p{
-	text-align: left;
-	margin: 0px;
-	font-size: 1em;
-}
-
-table,div,span,td{
-	font-size: 1em;
-	color: var(--strTextColor);
-}
-
-div.Titles{
-	padding: 0.5em;;
-	text-align: center;
-	color: var(--strTitleColor);
-}
-
-button{
-	font-family: var(--strFontFace);
-	font-size: 1em;
-	display: inline;
-}
-
-.ExerciseTitle{
-	font-size: 140%;
-	color: var(--strTitleColor);
-}
-
-.ExerciseSubtitle{
-	font-size: 120%;
-	color: var(--strTitleColor);
-}
-
-div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
-	background-color: var(--strExBGColor);
-	text-align: center;
-	font-size: 1em;
-	color: var(--strTextColor);
-	padding: 0.5em;
-	border-style: solid;
-	border-width: 1px 1px 1px 1px;
-	border-color: var(--strTextColor);
-	margin-bottom: 1px;
-}
-
-div.ReadingContainer, div.ExerciseContainer{
-	min-width: 15em;
-	flex-grow: 1;
-	flex-basis: 0;
-	margin: 1px;
-}
-
-div#ContainerDiv{
-	margin: -1px;
-	padding: 0;
-	border: none;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-/* EndCorePageCSS */
-
-.RTLText{
-	text-align: right;
-	font-size: 150%;
-	direction: rtl;
-	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
-}
-
-.CentredRTLText{
-	text-align: center;
-	font-size: 150%;
-	direction: rtl;
-	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
-}
-
-button p.RTLText{
-	text-align: center;
-}
-
-.RTLGapBox{
-	text-align: right;
-	font-size: 150%;
-	direction: rtl;
-	font-family: "Times New Roman", var(--strFontFace);
-}
-
-.Guess{
-	font-weight: bold;
-}
-
-.CorrectAnswer{
-	font-weight: bold;
-}
-
-div#Timer{
-	padding: 0.25em;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	color: var(--strTitleColor);
-}
-
-span#TimerText{
-	padding: 0.25em;
-	border-width: 1px;
-	border-style: solid;
-	font-weight: bold;
-	display: none;
-	color: var(--strTitleColor);
-}
-
-span.Instructions{
-
-}
-
-div.ExerciseText{
-
-}
-
-.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
-	color: var(--strTitleColor);
-}
-
-.LeftItem{
-	font-size: 1em;
-	color: var(--strTextColor);
-	text-align: left;
-}
-
-.RightItem{
-	font-weight: bold;
-	font-size: 1em;
-	color: var(--strTextColor);
-	text-align: left;
-}
-
-span.CorrectMark{
-
-}
-
-input, textarea{
-	font-family: var(--strFontFace);
-	font-size: 120%;
-}
-
-select{
-	font-size: 1em;
-}
-
-div.Feedback {
-	background-color: var(--strPageBGColor);
-	left: 33%;
-	width: 34%;
-	top: 33%;
-	z-index: 1;
-	border-style: solid;
-	border-width: 1px;
-	padding: 5px;
-	text-align: center;
-	color: var(--strTitleColor);
-	position: absolute;
-	display: none;
-	font-size: 1em;
-}
-
-
-
-
-div.ExerciseDiv{
-	color: var(--strTextColor);
-}
-
-/* JMatch standard output table. */
-table.MatchTable{
-	margin: 2em auto; 
-	border-width: 0;
-}
-
-/* JMatch flashcard styles */
-table.FlashcardTable{
-	background-color: transparent;
-	color: var(--strTextColor);
-	border-color: var(--strTextColor);
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2em;
-	margin-bottom: 2em;
-	/*width: 90%;*/
-	position: relative;
-	text-align: center;
-	padding: 0px;
-}
-
-table.FlashcardTable tr{
-	border-style: none;
-	margin: 0px;
-	padding: 0px;
-	background-color: var(--strExBGColor);
-}
-
-table.FlashcardTable td.Showing{
-	font-size: 140%;
-	text-align: center;
-	width: 50%;
-	display: table-cell;
-	padding: 2em;
-	margin: 0px;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 0.5em;
-	color: var(--strTextColor);
-	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
-	background-color: var(--strPageBGColor);
-}
-
-table.FlashcardTable td.Hidden{
-	display: none;
-}
-
-/* JMix styles */
-div.JMixDrag, div.JMatchDrag{
-	padding: 0;
-	background-color: var(--strPageBGColor);
-	border-style: none;
-}
-
-div#GuessDiv{
-	padding: 0.5em;
-	margin-bottom: 2em;
-}
-
-div#SegmentDiv{
-	margin-top: 2em;
-	margin-bottom: 2em;
-	text-align: center;
-}
-
-a.ExSegment{
-	font-size: 120%;
-	font-weight: bold;
-	text-decoration: none;
-	color: var(--strTextColor);
-	display: inline-block;
-	padding: 0.5em;
-	border: solid 1pt gray;
-	margin-bottom: 0.5em;
-}
-
-span.RemainingWordList{
-	font-style: italic;
-}
-
-div.DropLine {
-	position: absolute;
-	text-align: left;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	border-bottom-color: var(--strTitleColor);
-	width: 80%;
-	left: 10%;
-}
-
-/* JCloze styles */
-
-.ClozeWordList{
-	text-align: center;
-	font-weight: bold;
-}
-
-div.ClozeBody{
-	text-align: left;
-	margin-top: 2em;
-	margin-bottom: 2em;
-	line-height: 2.0
-}
-
-span.GapSpan{
-	font-weight: bold;
-}
-
-/* JCross styles */
-
-table.CrosswordGrid{
-	margin: auto auto 1em auto;
-	border-collapse: collapse;
-	padding: 0px;
-	background-color: #000000;
-}
-
-table.CrosswordGrid tbody tr td{
-	width: 1.5em;
-	height: 1.5em;
-	text-align: center;
-	vertical-align: middle;
-	font-size: 140%;
-	padding: 1px;
-	margin: 0px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #000000;
-	color: #000000;
-}
-
-table.CrosswordGrid span{
-	color: #000000;
-}
-
-table.CrosswordGrid td.BlankCell{
-	background-color: #000000;
-	color: #000000;
-}
-
-table.CrosswordGrid td.LetterOnlyCell{
-	text-align: center;
-	vertical-align: middle;
-	background-color: #ffffff;
-	color: #000000;
-	font-weight: bold;
-}
-
-table.CrosswordGrid td.NumLetterCell{
-	text-align: left;
-	vertical-align: top;
-	background-color: #ffffff;
-	color: #000000;
-	padding: 1px;
-	font-weight: bold;
-}
-
-.NumLetterCellText{
-	cursor: pointer;
-	color: #000000;
-}
-
-.GridNum{
-	vertical-align: super;
-	font-size: 66%;
-	font-weight: bold;
-	text-decoration: none;
-	color: #000000;
-}
-
-.GridNum:hover, .GridNum:visited{
-	color: #000000;
-}
-
-table#Clues{
-	margin: auto;
-	vertical-align: top;
-}
-
-table#Clues td{
-	vertical-align: top;
-}
-
-table.ClueList{
-  margin: auto;
-}
-
-td.ClueNum{
-	text-align: right;
-	font-weight: bold;
-	vertical-align: top;
-}
-
-td.Clue{
-	text-align: left;
-}
-
-div#ClueEntry{
-	text-align: left;
-	margin-bottom: 1em;
-}
-
-/* Keypad styles */
-
-div.Keypad{
-	text-align: center;
-	display: none; /* initially hidden, shown if needed */
-	margin-bottom: 0.5em;
-}
-
-div.Keypad button{
-	font-family: var(--strFontFace);
-	font-size: 120%;
-	background-color: #ffffff;
-	color: #000000;
-	width: 2em;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 0.5em;
-	color: var(--strTextColor);
-	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
-}
-
-/* JQuiz styles */
-
-div.QuestionNavigation{
-	text-align: center;
-}
-
-.QNum{
-	margin: 0em 1em 0.5em 1em;
-	font-weight: bold;
-	vertical-align: middle;
-}
-
-textarea{
-	font-family: var(--strFontFace);
-}
-
-.QuestionText{
-	text-align: left;
-	margin: 0px;
-	font-size: 1em;
-}
-
-.Answer{
-	font-size: 120%;
-}
-
-.PartialAnswer{
-	font-size: 120%;
-	letter-spacing: 0.1em;
-	color: var(--strTitleColor);
-}
-
-.Highlight{
-	color: #000000;
-	background-color: #ffff00;
-	font-weight: bold;
-	font-size: 120%;
-}
-
-ol.QuizQuestions{
-	text-align: left;
-	list-style-type: none;
-}
-
-li.QuizQuestion{
-	padding: 1em;
-	border-style: solid;
-	border-width: 0px 0px 1px 0px;
-}
-
-ol.MCAnswers{
-	text-align: left;
-	list-style-type: upper-alpha;
-	padding: 1em;
-}
-
-ol.MCAnswers li{
-	margin-bottom: 1em;
-}
-
-ol.MSelAnswers{
-	text-align: left;
-	list-style-type: lower-alpha;
-	padding: 1em;
-}
-
-div.ShortAnswer{
-	padding: 1em;
-}
-
-.FuncButton {
-	border-style: solid;
-	border-radius: 0.5em;
-	padding: 0.5em;
-	min-width: 3em;
-
-	border-left-color: var(--strFuncLightColor);
-	border-top-color: var(--strFuncLightColor);
-	border-right-color: var(--strFuncShadeColor);
-	border-bottom-color: var(--strFuncShadeColor);
-	color: var(--strTextColor);
-	background-color: var(--strExBGColor);
-
-	border-width: 1pt;
-	cursor: pointer;	
-	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
-}
-
-.FuncButton:active {
-	box-shadow: none;
-}
-
-.FuncButton:hover{
-	color: var(--strExBGColor);
-	background-color: var(--strTextColor);
-}
-
-/*BeginNavBarStyle*/
-
-div.NavButtonBar{
-	background-color: var(--strNavBarColor);
-	text-align: center;
-	margin: 0.25rem 0;
-	clear: both;
-	font-size: 1em;
-	padding: 0.2em;
-	box-sizing: border-box;
-}
-
-.NavButton {
-	border-style: solid;
-	border-radius: 0.5em;
-	padding: 0.5em;
-	min-width: 3em;
-	
-	border-left-color: var(--strNavLightColor);
-	border-top-color: var(--strNavLightColor);
-	border-right-color: var(--strNavShadeColor);
-	border-bottom-color: var(--strNavShadeColor); 
-	background-color: var(--strNavBarColor);
-	color: var(--strNavTextColor);
-
-	border-width: 1pt;
-	cursor: pointer;	
-	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
-}
-
-.NavButton:active {
-	box-shadow: none;
-}
-
-.NavButton:hover{
-	color: var(--strNavBarColor);
-	background-color: var(--strNavTextColor);
-}
-
-/*EndNavBarStyle*/
-
-a{
-	color: var(--strLinkColor);
-}
-
-a:visited{
-	color: var(--strVLinkColor);
-}
-
-a:hover{
-	color: var(--strLinkColor);
-}
-
-div.CardStyle {
-	position: absolute;
-	font-family: var(--strFontFace);
-	font-size: 1em;
-	border-style: solid;
-	border-radius: 0.5em;
-	padding: 0.5em;
-	min-width: 2em;
-	border-width: 1pt;
-	color: var(--strTextColor);
-	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
-	background-color: var(--strExBGColor);
-	left: -50px;
-	top: -50px;
-	overflow: visible;
-	touch-action: none;
-	user-select: none;
-	box-sizing: border-box;
-}
-
-div.CardStyleCentered{
-	text-align: center;
-}
-
-.rtl{
-	text-align: right;
-	font-size: 140%;
-}
-
-
-</style>
+      /* CSS variables for colours. */
+      :root {
+        --strFontFace: Montserrat, sans-serif;
+        --strFontSize: medium;
+        --strTextColor: black;
+        --hoverBotao: #19bbff;
+        --strTitleColor: #000000;
+
+        --strFuncLightColor: #ffffff;
+        --strFuncShadeColor: #a8a8a8;
+        --strLinkColor: #0000ff;
+        --strVLinkColor: #0000cc;
+
+        --strNavBarColor: #000000;
+        --strNavLightColor: #7f7f7f;
+        --strNavShadeColor: #000000;
+        --strNavTextColor: #ffffff;
+
+        --strPageBGColor: #c0c0c0;
+        --strExBGColor: #ffffff;
+      }
+
+      body {
+        font-family: var(--strFontFace);
+        background-color: #f1f1f1;
+        color: var(--strTextColor);
+
+        margin-right: 5%;
+        margin-left: 5%;
+        font-size: var(--strFontSize);
+        padding-bottom: 0.5em;
+      }
+
+      p {
+        text-align: left;
+        margin: 0px;
+        font-size: 1em;
+      }
+
+      table,
+      div,
+      span,
+      td {
+        font-size: 1em;
+        color: var(--strTextColor);
+      }
+
+      div.Titles {
+        padding: 0.5em;
+        text-align: center;
+        color: var(--strTitleColor);
+      }
+
+      button {
+        font-family: var(--strFontFace);
+        font-size: 1em;
+        display: inline;
+      }
+
+      .ExerciseTitle {
+        font-size: 140%;
+        color: var(--hoverBotao);
+      }
+
+      .ExerciseSubtitle {
+        font-size: 120%;
+        color: var(--strTitleColor);
+      }
+
+      div.StdDiv,
+      div.ExerciseContainer,
+      div.ReadingContainer {
+        background-color: var(--strExBGColor);
+        text-align: center;
+        font-size: 1em;
+        color: var(--strTextColor);
+        padding: 0.5em;
+        border-style: solid;
+        border-width: 1px 1px 1px 1px;
+        border-color: var(--strTextColor);
+        margin-bottom: 1px;
+      }
+
+      div.ReadingContainer,
+      div.ExerciseContainer {
+        min-width: 15em;
+        flex-grow: 1;
+        flex-basis: 0;
+        margin: 1px;
+        
+      }
+
+      div#ContainerDiv {
+        margin: -1px;
+        padding: 0;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      /* EndCorePageCSS */
+
+      .RTLText {
+        text-align: right;
+        font-size: 150%;
+        direction: rtl;
+        font-family: "Simplified Arabic", "Traditional Arabic",
+          "Times New Roman", var(--strFontFace);
+      }
+
+      .CentredRTLText {
+        text-align: center;
+        font-size: 150%;
+        direction: rtl;
+        font-family: "Simplified Arabic", "Traditional Arabic",
+          "Times New Roman", var(--strFontFace);
+      }
+
+      button p.RTLText {
+        text-align: center;
+      }
+
+      .RTLGapBox {
+        text-align: right;
+        font-size: 150%;
+        direction: rtl;
+        font-family: "Times New Roman", var(--strFontFace);
+      }
+
+      .Guess {
+        font-weight: bold;
+      }
+
+      .CorrectAnswer {
+        font-weight: bold;
+      }
+
+      div#Timer {
+        padding: 0.25em;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: var(--strTitleColor);
+      }
+
+      span#TimerText {
+        padding: 0.25em;
+        border-width: 1px;
+        border-style: solid;
+        font-weight: bold;
+        display: none;
+        color: var(--strTitleColor);
+      }
+
+      .FeedbackText,
+      .FeedbackText span.CorrectAnswer,
+      .FeedbackText span.Guess,
+      .FeedbackText span.Answer {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        color: rgb(0, 0, 0);
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .btn_certificado{
+      	text-align: center;
+        margin-top: 15px;
+        color: white;
+        display: none;
+      }
+
+      .btn_certificado button{
+      	border:none;
+      	background-color: #19bbff;
+      	width: 220px;
+      	height: 40px;
+      	border-radius: 40px;
+      	color: white;
+      	font-weight:600;
+      	cursor: pointer;
+      }
+
+      .btn_certificado.ativo{
+      	display:block;
+      	align-items: center;
+      }
+
+      .LeftItem {
+        font-size: 1em;
+        color: var(--strTextColor);
+        text-align: left;
+      }
+
+      .RightItem {
+        font-weight: bold;
+        font-size: 1em;
+        color: var(--strTextColor);
+        text-align: left;
+      }
+
+      input,
+      textarea {
+        font-family: var(--strFontFace);
+        font-size: 120%;
+      }
+
+      select {
+        font-size: 1em;
+      }
+
+      div.Feedback {
+        background-color:#F5F5F5;
+        left: 33%;
+        width: 34%;
+        top: 33%;
+        z-index: 1;
+        border-style:solid;
+        border-width: 1px;
+        border-radius: 15px;
+        padding: 5px;
+        text-align: center;
+        color: var(--strTitleColor);
+        position: absolute;
+        display: none;
+        font-size: 1em;
+      }
+
+      div.ExerciseDiv {
+        color: var(--strTextColor);
+      }
+
+      /* JMatch standard output table. */
+      table.MatchTable {
+        margin: 2em auto;
+        border-width: 0;
+      }
+
+      /* JMatch flashcard styles */
+      table.FlashcardTable {
+        background-color: transparent;
+        color: var(--strTextColor);
+        border-color: var(--strTextColor);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        /*width: 90%;*/
+        position: relative;
+        text-align: center;
+        padding: 0px;
+      }
+
+      table.FlashcardTable tr {
+        border-style: none;
+        margin: 0px;
+        padding: 0px;
+        background-color: var(--strExBGColor);
+      }
+
+      table.FlashcardTable td.Showing {
+        font-size: 140%;
+        text-align: center;
+        width: 50%;
+        display: table-cell;
+        padding: 2em;
+        margin: 0px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 0.5em;
+        color: var(--strTextColor);
+        box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+        background-color: var(--strPageBGColor);
+      }
+
+      table.FlashcardTable td.Hidden {
+        display: none;
+      }
+
+      /* JMix styles */
+      div.JMixDrag,
+      div.JMatchDrag {
+        padding: 0;
+        background-color: var(--strPageBGColor);
+        border-style: none;
+      }
+
+      div#GuessDiv {
+        padding: 0.5em;
+        margin-bottom: 2em;
+      }
+
+      div#SegmentDiv {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        text-align: center;
+      }
+
+      a.ExSegment {
+        font-size: 120%;
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--strTextColor);
+        display: inline-block;
+        padding: 0.5em;
+        border: solid 1pt gray;
+        margin-bottom: 0.5em;
+      }
+
+      span.RemainingWordList {
+        font-style: italic;
+      }
+
+      div.DropLine {
+        position: absolute;
+        text-align: left;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: var(--strTitleColor);
+        width: 80%;
+        left: 10%;
+      }
+
+      /* JCloze styles */
+
+      .ClozeWordList {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      div.ClozeBody {
+        text-align: left;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        line-height: 2;
+      }
+
+      span.GapSpan {
+        font-weight: bold;
+      }
+
+      /* JCross styles */
+
+      table.CrosswordGrid {
+        margin: auto auto 1em auto;
+        border-collapse: collapse;
+        padding: 0px;
+        background-color: #000000;
+      }
+
+      table.CrosswordGrid tbody tr td {
+        width: 1.5em;
+        height: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 140%;
+        padding: 1px;
+        margin: 0px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #000000;
+        color: #000000;
+      }
+
+      table.CrosswordGrid span {
+        color: #000000;
+      }
+
+      table.CrosswordGrid td.BlankCell {
+        background-color: #000000;
+        color: #000000;
+      }
+
+      table.CrosswordGrid td.LetterOnlyCell {
+        text-align: center;
+        vertical-align: middle;
+        background-color: #ffffff;
+        color: #000000;
+        font-weight: bold;
+      }
+
+      table.CrosswordGrid td.NumLetterCell {
+        text-align: left;
+        vertical-align: top;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 1px;
+        font-weight: bold;
+      }
+
+      .NumLetterCellText {
+        cursor: pointer;
+        color: #000000;
+      }
+
+      .GridNum {
+        vertical-align: super;
+        font-size: 66%;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000000;
+      }
+
+      .GridNum:hover,
+      .GridNum:visited {
+        color: #000000;
+      }
+
+      table#Clues {
+        margin: auto;
+        vertical-align: top;
+      }
+
+      table#Clues td {
+        vertical-align: top;
+      }
+
+      table.ClueList {
+        margin: auto;
+      }
+
+      td.ClueNum {
+        text-align: right;
+        font-weight: bold;
+        vertical-align: top;
+      }
+
+      td.Clue {
+        text-align: left;
+      }
+
+      div#ClueEntry {
+        text-align: left;
+        margin-bottom: 1em;
+      }
+
+      /* Keypad styles */
+
+      div.Keypad {
+        text-align: center;
+        display: none; /* initially hidden, shown if needed */
+        margin-bottom: 0.5em;
+      }
+
+      div.Keypad button {
+        font-family: var(--strFontFace);
+        font-size: 120%;
+        background-color: #ffffff;
+        color: #000000;
+        width: 2em;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 0.5em;
+        color: var(--strTextColor);
+        box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+      }
+
+      /* JQuiz styles */
+
+      div.QuestionNavigation {
+        text-align: center;
+      }
+
+      .QNum {
+        margin: 0em 1em 0.5em 1em;
+        font-weight: bold;
+        vertical-align: middle;
+        color: var(--hoverBotao);
+      }
+
+      textarea {
+        font-family: var(--strFontFace);
+      }
+
+      .QuestionText {
+        text-align: left;
+        margin: 0px;
+        font-size: 1em;
+      }
+
+      .Answer {
+        font-size: 120%;
+      }
+
+      .PartialAnswer {
+        font-size: 120%;
+        letter-spacing: 0.1em;
+        color: var(--strTitleColor);
+      }
+
+      .Highlight {
+        color: #000000;
+        background-color: #ffff00;
+        font-weight: bold;
+        font-size: 120%;
+      }
+
+      ol.QuizQuestions {
+        text-align: left;
+        list-style-type: none;
+      }
+
+      li.QuizQuestion {
+        padding: 1em;
+        border-style: solid;
+        border-width: 0px 0px 1px 0px;
+      }
+
+      ol.MCAnswers {
+        text-align: left;
+        list-style-type: upper-alpha;
+        padding: 1em;
+      }
+
+      ol.MCAnswers li {
+        margin-bottom: 1em;
+      }
+
+      ol.MSelAnswers {
+        text-align: left;
+        list-style-type: lower-alpha;
+        padding: 1em;
+      }
+
+      div.ShortAnswer {
+        padding: 1em;
+      }
+
+      .FuncButton {
+        border-style: solid;
+        border-radius: 10em;
+        padding: 0.5em;
+        min-width: 3em;
+
+        border-left-color: var(--strFuncLightColor);
+        border-top-color: var(--strFuncLightColor);
+        border-right-color: var(--strFuncShadeColor);
+        border-bottom-color: var(--strFuncShadeColor);
+        color: var(--strTextColor);
+        background-color: var(--strExBGColor);
+		font-weight: 450;
+
+        border-width: 1pt;
+        cursor: pointer;
+        box-shadow: 0.2em 0.1em 0.4em var(--strFuncShadeColor);
+      }
+
+      .FuncButton:active {
+        box-shadow: none;
+      }
+
+      .FuncButton:hover {
+        color: var(--strExBGColor);
+        background-color: var(--hoverBotao);
+      }
+
+      /*BeginNavBarStyle*/
+
+      .botao_certificado{
+        text-align: center;
+        margin-top: 30px;
+        background-color: #19bbff;
+        color: white;
+        /* display: none; */
+      }
+
+      div.NavButtonBar {
+        /* background-color: var(--strNavBarColor); */
+        text-align: center;
+        margin: 0.25rem 0;
+        clear: both;
+        font-size: 1em;
+        padding: 0.2em;
+        box-sizing: border-box;
+      }
+
+      .NavButton, a{
+        text-decoration: none;
+      }
+      .NavButton {
+        border: none;
+        border-radius: 10em;
+        padding: 0.5em;
+        min-width: 10em;
+
+        background-color: var(--hoverBotao);
+        color: var(--strNavTextColor);
+		    font-weight: 550;
+
+        border-width: 1pt;
+        cursor: pointer;
+        box-shadow: 0.2em 0.1em 0.4em var(--strFuncShadeColor);
+      }
+
+      .NavButton:active {
+        box-shadow: none;
+      }
+
+      .NavButton:hover {
+        color: var(--hoverBotao);
+        background-color: var(--strNavTextColor);
+      }
+
+      /*EndNavBarStyle*/
+
+      a {
+        color: var(--strLinkColor);
+      }
+
+      a:visited {
+        color: var(--strVLinkColor);
+      }
+
+      a:hover {
+        color: var(--strLinkColor);
+      }
+
+      div.CardStyle {
+        position: absolute;
+        font-family: var(--strFontFace);
+        font-size: 1em;
+        border-style: solid;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        min-width: 2em;
+        border-width: 1pt;
+        color: var(--strTextColor);
+        box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+        background-color: var(--strExBGColor);
+        left: -50px;
+        top: -50px;
+        overflow: visible;
+        touch-action: none;
+        user-select: none;
+        box-sizing: border-box;
+      }
+
+      div.CardStyleCentered {
+        text-align: center;
+      }
+
+      .rtl {
+        text-align: right;
+        font-size: 140%;
+      }
+    </style>
 
 <script>
-
-//<![CDATA[
-
-<!--
-
-
-
-
-//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
-
 function FocusAButton(){
 	if (document.getElementById('CheckButton1') != null){
 		document.getElementById('CheckButton1').focus();
@@ -666,14 +672,7 @@ function FocusAButton(){
 		}
 	}
 }
-
-
-
-
-//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
-
 var topZ = 1000;
-
 function ShowMessage(Feedback){
 	var Output = Feedback + '<br /><br />';
 	document.getElementById('FeedbackContent').innerHTML = Output;
@@ -946,20 +945,15 @@ function ClearTextBoxes(){
 }
 
 
-
-
-
-
-
 //JQUIZ CORE JAVASCRIPT CODE
 
 var CurrQNum = 0;
 var CorrectIndicator = '&#x2714;';
 var IncorrectIndicator = '&#x2718;';
-var YourScoreIs = 'Your score is ';
+var YourScoreIs = 'Sua pontuação é de ';
 
 //New for 6.2.2.0
-var CompletedSoFar = 'Questions completed so far: ';
+var CompletedSoFar = 'Questões efetivadas:';
 var ExerciseCompleted = 'You have completed the exercise.';
 var ShowCompletedSoFar = true;
 
@@ -968,16 +962,16 @@ var CorrectFirstTime = 'Questions answered correctly first time: ';
 var ShowCorrectFirstTime = true;
 var ShuffleQs = false;
 var ShuffleAs = false;
-var DefaultRight = 'Correct!';
-var DefaultWrong = 'Sorry! Try again.';
-var QsToShow = 6;
+var DefaultRight = 'Resposta certa!';
+var DefaultWrong = '';
+var QsToShow = 10;
 var Score = 0;
 var Finished = false;
 var Qs = null;
 var QArray = new Array();
 var ShowingAllQuestions = false;
-var ShowAllQuestionsCaption = 'Show all questions';
-var ShowOneByOneCaption = 'Show questions one by one';
+var ShowAllQuestionsCaption = 'Mostrar tudo';
+var ShowOneByOneCaption = 'Mostrar um por um';
 var State = new Array();
 var Feedback = '';
 var TimeOver = false;
@@ -1157,48 +1151,76 @@ I[0]=new Array();I[0][0]=100;
 I[0][1]='';
 I[0][2]='0';
 I[0][3]=new Array();
-I[0][3][0]=new Array('comunicabilidade e usabilidade','A resposta correta \u00E9 a letra B: "acessibilidade e usabilidade".',0,0,1);
+I[0][3][0]=new Array('comunicabilidade e usabilidade','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra B.',0,0,1);
 I[0][3][1]=new Array('acessibilidade e usabilidade','',1,100,1);
-I[0][3][2]=new Array('comunicabilidade e design','A resposta correta \u00E9 a letra B: "acessibilidade e usabilidade".',0,0,1);
-I[0][3][3]=new Array('acessibilidade e design','A resposta correta \u00E9 a letra B: "acessibilidade e usabilidade".',0,0,1);
+I[0][3][2]=new Array('comunicabilidade e design','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra B.',0,0,1);
+I[0][3][3]=new Array('acessibilidade e design','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra B.',0,0,1);
 I[1]=new Array();I[1][0]=100;
 I[1][1]='';
 I[1][2]='0';
 I[1][3]=new Array();
-I[1][3][0]=new Array('Se o sistema auxilia o usua\u0301rio na realizac\u0327a\u0303o da tarefa, permitindo alcanc\u0327ar seus objetivos de forma mais ra\u0301pida e precisa.','A resposta correta \u00E9 a letra C.',0,0,1);
-I[1][3][1]=new Array('Se e\u0301 fa\u0301cil aprender a utilizar as funcionalidades do sistema.','A resposta correta \u00E9 a letra C.',0,0,1);
+I[1][3][0]=new Array('Se o sistema auxilia o usua\u0301rio na realizac\u0327a\u0303o da tarefa, permitindo alcanc\u0327ar seus objetivos de forma mais ra\u0301pida e precisa.','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra C.',0,0,1);
+I[1][3][1]=new Array('Se e\u0301 fa\u0301cil aprender a utilizar as funcionalidades do sistema.','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra C.',0,0,1);
 I[1][3][2]=new Array('Se o sistema fornece um conjunto apropriado de func\u0327o\u0303es, considerando as necessidades e expectativas do usua\u0301rio final.','',1,100,1);
-I[1][3][3]=new Array('Se e\u0301 fa\u0301cil lembrar como utilizar o sistema apo\u0301s uma experie\u0302ncia pre\u0301via.','A resposta correta \u00E9 a letra C.',0,0,1);
+I[1][3][3]=new Array('Se e\u0301 fa\u0301cil lembrar como utilizar o sistema apo\u0301s uma experie\u0302ncia pre\u0301via.','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra C.',0,0,1);
 I[2]=new Array();I[2][0]=100;
 I[2][1]='';
 I[2][2]='0';
 I[2][3]=new Array();
-I[2][3][0]=new Array('F\u00E1cil aprendizado, de forma que os usu\u00E1rios novatos possam iniciar a opera\u00E7\u00E3o e obter o desempenho m\u00E1ximo.','A resposta correta \u00E9 a letra C.',0,0,1);
-I[2][3][1]=new Array('Efici\u00EAncia na utiliza\u00E7\u00E3o, garantindo que, uma vez que o usu\u00E1rio tenha aprendido a lidar com a ferramenta, obtenha r\u00E1pido e eficiente uso para executar suas tarefas.','A resposta correta \u00E9 a letra C.',0,0,1);
+I[2][3][0]=new Array('F\u00E1cil aprendizado, de forma que os usu\u00E1rios novatos possam iniciar a opera\u00E7\u00E3o e obter o desempenho m\u00E1ximo.','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra C.',0,0,1);
+I[2][3][1]=new Array('Efici\u00EAncia na utiliza\u00E7\u00E3o, garantindo que, uma vez que o usu\u00E1rio tenha aprendido a lidar com a ferramenta, obtenha r\u00E1pido e eficiente uso para executar suas tarefas.','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra C.',0,0,1);
 I[2][3][2]=new Array('Utiliza\u00E7\u00E3o das \u00FAltimas e mais modernas tecnologias dispon\u00EDveis.','',1,100,1);
-I[2][3][3]=new Array('Satisfa\u00E7\u00E3o na utiliza\u00E7\u00E3o, de forma que quanto mais prazeroso e agrad\u00E1vel for o uso, mais rapidamente o usu\u00E1rio aprenda e realize suas tarefas.','A resposta correta \u00E9 a letra C.',0,0,1);
+I[2][3][3]=new Array('Satisfa\u00E7\u00E3o na utiliza\u00E7\u00E3o, de forma que quanto mais prazeroso e agrad\u00E1vel for o uso, mais rapidamente o usu\u00E1rio aprenda e realize suas tarefas.','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra C.',0,0,1);
 I[3]=new Array();I[3][0]=100;
 I[3][1]='';
 I[3][2]='0';
 I[3][3]=new Array();
-I[3][3][0]=new Array('codifica\u00E7\u00E3o','A resposta correta \u00E9 a letra D: "aprendizado".',0,0,1);
-I[3][3][1]=new Array('design','A resposta correta \u00E9 a letra D.',0,0,1);
-I[3][3][2]=new Array('entrevista','A resposta correta \u00E9 a letra D.',0,0,1);
+I[3][3][0]=new Array('codifica\u00E7\u00E3o','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra D.',0,0,1);
+I[3][3][1]=new Array('design','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra D.',0,0,1);
+I[3][3][2]=new Array('entrevista','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra D.',0,0,1);
 I[3][3][3]=new Array('aprendizado','',1,100,1);
 I[4]=new Array();I[4][0]=100;
 I[4][1]='';
 I[4][2]='0';
 I[4][3]=new Array();
-I[4][3][0]=new Array('Fornecimento de status do sistema ao usu\u00E1rio. Informar a ele em que \u00E1rea est\u00E1, estava e pode se dirigir.','A resposta correta \u00E9 a letra B.',0,0,1);
+I[4][3][0]=new Array('Fornecimento de status do sistema ao usu\u00E1rio. Informar a ele em que \u00E1rea est\u00E1, estava e pode se dirigir.','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra B.',0,0,1);
 I[4][3][1]=new Array('Semelhan\u00E7a entre a linguagem do sistema e a do usu\u00E1rio. O sistema fornece uma interface familiar e condizente com os aspectos do ambiente em que vive.','',1,100,1);
-I[4][3][2]=new Array('Suporte a erros ou m\u00FAltiplas escolhas do usu\u00E1rio. Consiste em disponibilizar ao usu\u00E1rio uma falsa liberdade, em que ele tem controle sobre as a\u00E7\u00F5es no sistema.','A resposta correta \u00E9 a letra B.',0,0,1);
+I[4][3][2]=new Array('Suporte a erros ou m\u00FAltiplas escolhas do usu\u00E1rio. Consiste em disponibilizar ao usu\u00E1rio uma falsa liberdade, em que ele tem controle sobre as a\u00E7\u00F5es no sistema.','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra B.',0,0,1);
 I[5]=new Array();I[5][0]=100;
 I[5][1]='';
 I[5][2]='0';
 I[5][3]=new Array();
 I[5][3][0]=new Array('Um campo de formul\u00E1rio pode apresentar diferentes linguagens em sua apresenta\u00E7\u00E3o. Por exemplo: o campo nome e senha serem name e password respectivamente, e o bot\u00E3o de submiss\u00E3o apresentar o t\u00EDtulo Inscrever-se.','',1,100,1);
-I[5][3][1]=new Array('O \u00EDcone para deletar um arquivo pode ser representado por uma lixeira ou um X, assim como o \u00EDcone para salvar o arquivo pode ser um disquete','A resposta correta \u00E9 a letra A.',0,0,1);
-I[5][3][2]=new Array('Dentro de uma \u00E1rea de edi\u00E7\u00E3o, o \u00EDcone que representa apagar pode ser uma borracha, da mesma forma que a fun\u00E7\u00E3o pintar pode ser representada por um pincel.','A resposta correta \u00E9 a letra A.',0,0,1);
+I[5][3][1]=new Array('O \u00EDcone para deletar um arquivo pode ser representado por uma lixeira ou um X, assim como o \u00EDcone para salvar o arquivo pode ser um disquete','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra A.',0,0,1);
+I[5][3][2]=new Array('Dentro de uma \u00E1rea de edi\u00E7\u00E3o, o \u00EDcone que representa apagar pode ser uma borracha, da mesma forma que a fun\u00E7\u00E3o pintar pode ser representada por um pincel.','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra A.',0,0,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('Breadcrumbs e Atalhos Ctrl Z e Ctrl Y','',1,100,1);
+I[6][3][1]=new Array('Mensagem de erro e mensagem de decis\u00E3o antes de alguma a\u00E7\u00E3o sens\u00EDvel','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra A.',0,0,1);
+I[6][3][2]=new Array('\u00CDcone de lixeira para a\u00E7\u00E3o excluir e bot\u00F5es padronizados','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra A.',0,0,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('Barra de progresso de uma atualiza\u00E7\u00E3o e \u00EDcone de lupa representando a a\u00E7\u00E3o pesquisar','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra B.',0,0,1);
+I[7][3][1]=new Array('Apresenta\u00E7\u00E3o de funcionalidades (ex.: bot\u00F5es) com modelos semelhantes e consistentes, e atalhos de acesso','',1,100,1);
+I[7][3][2]=new Array('Disposi\u00E7\u00E3o simples e objetiva de informa\u00E7\u00E3o na interface e mensagens de erro','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra B.',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('Tutorial/treinamento para utiliza\u00E7\u00E3o do sistema e pedido de confirma\u00E7\u00E3o antes de uma a\u00E7\u00E3o sens\u00EDvel','',1,100,1);
+I[8][3][1]=new Array('Preenchimento autom\u00E1tico de formul\u00E1rios e face id','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra A.',0,0,1);
+I[8][3][2]=new Array('Feedback do usu\u00E1rio e mensagem de erro','N\u00E3o foi dessa vez'+'<br>'+'A resposta correta \u00E9 a letra A.',0,0,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('Mensagem de erro clara e objetiva e barra de busca no topo da p\u00E1gina, como no padr\u00E3o de sites e-commerce','',1,100,1);
+I[9][3][1]=new Array('Mensagem de confirma\u00E7\u00E3o antes de a\u00E7\u00E3o sens\u00EDvel e preenchimento autom\u00E1tico','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra A.',0,0,1);
+I[9][3][2]=new Array('Breadcrumbs e atalhos de acesso ao sistema','N\u00E3o foi dessa vez.'+'<br>'+'A resposta correta \u00E9 a letra A.',0,0,1);
 
 
 function StartUp(){
@@ -1475,6 +1497,7 @@ function CalculateOverallScore(){
 }
 
 //New for 6.2.2.0
+
 function CheckQuestionsCompleted(){
 	if (ShowCompletedSoFar == false){return '';}
 	var QsCompleted = 0;
@@ -1488,12 +1511,16 @@ function CheckQuestionsCompleted(){
 //Fixes for 6.2.2.2
 	if (QsCompleted >= QArray.length){
 		return ExerciseCompleted;
+		
 	}
 	else{
 		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
 	}
+
+	
 }
 
+var botaocertificado = document.querySelector('.btn_certificado');
 function CheckFinished(){
 	var FB = '';
 	var AllDone = true;
@@ -1527,15 +1554,8 @@ function CheckFinished(){
 		WriteToInstructions(FB);
 		
 		Finished == true;
-
-
-
-
 		TimeOver = true;
 		Locked = true;
-		
-
-
 		Finished = true;
 		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
 		for (QNum=0; QNum<State.length; QNum++){
@@ -1546,81 +1566,54 @@ function CheckFinished(){
 			}
 		}
 		Detail += '</fields></hpnetresult>';
+
+		botaocertificado.className.add('ativo');
+		console.log("feito");
 	}
 
+	
 }
-
-
-
-
-
-
-
-
-
-
-//-->
-
-//]]>
-
 </script>
-
-
 </head>
 
 <body onload="StartUp()" id="TheBody" >
 
 <!-- BeginTopNavButtons -->
-
-
 <div class="NavButtonBar" id="TopNavBar">
 
-
-
-
-<button class="NavButton" onclick="location='contents.htm'; return false;"> Index </button>
-
-
-
-<button class="NavButton" onclick="location='nextpage.htm'; return false;">=&gt;</button>
-
+<a href="index.html">
+<button class="NavButton">Página inicial
+</button>
+</a>
 
 </div>
-
-
 
 <!-- EndTopNavButtons -->
 
 <div class="Titles">
 	<h2 class="ExerciseTitle">Quiz GoUser</h2>
-
-
-
 </div>
 
 <div id="InstructionsDiv" class="StdDiv">
 	<div id="Instructions"></div>
 </div>
 
-
 <div id="ContainerDiv">
-
-
 
 <div class="ExerciseContainer">
 
 <div id="QNav" class="QuestionNavigation">
 
 <p style="text-align: right;">
-<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Show all questions</button>
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;" style="padding-right: 20px;padding-left:20px;">Mostrar tudo</button>
 </p>
 
 <div id="OneByOneReadout">
-<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;" style="padding-right:20px;padding-left: 20px;">Anterior</button>
 
 <span id="QNumReadout" class="QNum">&#160;</span>
 
-<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;" style="padding-right:20px;padding-left: 20px;">Próximo</button>
 <br />
 </div>
 
@@ -1632,44 +1625,24 @@ function CheckFinished(){
 <li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">Seguir as regras de usabilidade para a interface de um programa com o usu&#x00E1;rio &#x00E9; uma das boas pr&#x00E1;ticas de IHC (Intera&#x00E7;&#x00E3;o Homem-Computador). Qual das alternativas abaixo N&#x00C3;O &#x00E9; um dos princ&#x00ED;pios b&#x00E1;sicos de usabilidade?</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;F&#x00E1;cil aprendizado, de forma que os usu&#x00E1;rios novatos possam iniciar a opera&#x00E7;&#x00E3;o e obter o desempenho m&#x00E1;ximo.</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;Efici&#x00EA;ncia na utiliza&#x00E7;&#x00E3;o, garantindo que, uma vez que o usu&#x00E1;rio tenha aprendido a lidar com a ferramenta, obtenha r&#x00E1;pido e eficiente uso para executar suas tarefas.</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;Utiliza&#x00E7;&#x00E3;o das &#x00FA;ltimas e mais modernas tecnologias dispon&#x00ED;veis.</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">?</button>&#160;&#160;Satisfa&#x00E7;&#x00E3;o na utiliza&#x00E7;&#x00E3;o, de forma que quanto mais prazeroso e agrad&#x00E1;vel for o uso, mais rapidamente o usu&#x00E1;rio aprenda e realize suas tarefas.</li></ol></li>
 <li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText"> A usabilidade aborda principalmente a capacidade cognitiva, perceptiva e motora dos usu&#x00E1;rios, que &#x00E9; empregada durante a intera&#x00E7;&#x00E3;o com o sistema.<br /><br />&#x00C9; um fator de usabilidade a facilidade de:</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;codifica&#x00E7;&#x00E3;o</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;design</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;entrevista</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">?</button>&#160;&#160;aprendizado</li></ol></li>
 <li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">Sabe-se que os m&#x00E9;todos de inspe&#x00E7;&#x00E3;o avaliam o potencial de usabilidade do produto com base em especifica&#x00E7;&#x00F5;es, como a avalia&#x00E7;&#x00E3;o heur&#x00ED;stica desenvolvida por Nielsen. De acordo com essa, &#x00E9; poss&#x00ED;vel afirmar que a heur&#x00ED;stica de Compatibilidade entre o sistema e o mundo real pode ser definida como:</div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;Fornecimento de status do sistema ao usu&#x00E1;rio. Informar a ele em que &#x00E1;rea est&#x00E1;, estava e pode se dirigir.</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;Semelhan&#x00E7;a entre a linguagem do sistema e a do usu&#x00E1;rio. O sistema fornece uma interface familiar e condizente com os aspectos do ambiente em que vive.</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;Suporte a erros ou m&#x00FA;ltiplas escolhas do usu&#x00E1;rio. Consiste em disponibilizar ao usu&#x00E1;rio uma falsa liberdade, em que ele tem controle sobre as a&#x00E7;&#x00F5;es no sistema.</li></ol></li>
-<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">A partir da defini&#x00E7;&#x00E3;o da segunda heur&#x00ED;stica de Compatibilidade entre o sistema e o mundo real, n&#x00E3;o &#x00E9; poss&#x00ED;vel aceitar dentro de uma interface que:</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;Um campo de formul&#x00E1;rio pode apresentar diferentes linguagens em sua apresenta&#x00E7;&#x00E3;o. Por exemplo: o campo nome e senha serem name e password respectivamente, e o bot&#x00E3;o de submiss&#x00E3;o apresentar o t&#x00ED;tulo Inscrever-se.</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;O &#x00ED;cone para deletar um arquivo pode ser representado por uma lixeira ou um X, assim como o &#x00ED;cone para salvar o arquivo pode ser um disquete</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;Dentro de uma &#x00E1;rea de edi&#x00E7;&#x00E3;o, o &#x00ED;cone que representa apagar pode ser uma borracha, da mesma forma que a fun&#x00E7;&#x00E3;o pintar pode ser representada por um pincel.</li></ol></li></ol>
-
-
-
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">A partir da defini&#x00E7;&#x00E3;o da segunda heur&#x00ED;stica de Compatibilidade entre o sistema e o mundo real, n&#x00E3;o &#x00E9; poss&#x00ED;vel aceitar dentro de uma interface que:</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;Um campo de formul&#x00E1;rio pode apresentar diferentes linguagens em sua apresenta&#x00E7;&#x00E3;o. Por exemplo: o campo nome e senha serem name e password respectivamente, e o bot&#x00E3;o de submiss&#x00E3;o apresentar o t&#x00ED;tulo Inscrever-se.</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;O &#x00ED;cone para deletar um arquivo pode ser representado por uma lixeira ou um X, assim como o &#x00ED;cone para salvar o arquivo pode ser um disquete</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;Dentro de uma &#x00E1;rea de edi&#x00E7;&#x00E3;o, o &#x00ED;cone que representa apagar pode ser uma borracha, da mesma forma que a fun&#x00E7;&#x00E3;o pintar pode ser representada por um pincel.</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">De acordo com os conceitos das heur&#x00ED;sticas que tratam sobre Visibilidade do Status do Sistema e Controle e Liberdade do Usu&#x00E1;rio, s&#x00E3;o exemplos dessas, respectivamente:</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;Breadcrumbs e Atalhos Ctrl Z e Ctrl Y</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;Mensagem de erro e mensagem de decis&#x00E3;o antes de alguma a&#x00E7;&#x00E3;o sens&#x00ED;vel</li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;&#x00CD;cone de lixeira para a&#x00E7;&#x00E3;o excluir e bot&#x00F5;es padronizados</li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">De acordo com os conceitos das heur&#x00ED;sticas que tratam sobre Consist&#x00EA;ncia e Padroniza&#x00E7;&#x00E3;o e Efici&#x00EA;ncia e Flexibilidade de Uso, s&#x00E3;o exemplos dessas, respectivamente:</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;Barra de progresso de uma atualiza&#x00E7;&#x00E3;o e &#x00ED;cone de lupa representando a a&#x00E7;&#x00E3;o pesquisar</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;Apresenta&#x00E7;&#x00E3;o de funcionalidades (ex.: bot&#x00F5;es) com modelos semelhantes e consistentes, e atalhos de acesso</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;Disposi&#x00E7;&#x00E3;o simples e objetiva de informa&#x00E7;&#x00E3;o na interface e mensagens de erro</li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">De acordo com os conceitos das heur&#x00ED;sticas que tratam sobre Ajuda e Documenta&#x00E7;&#x00E3;o e Preven&#x00E7;&#x00E3;o de Erros, s&#x00E3;o exemplos dessas, respectivamente:</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;Tutorial/treinamento para utiliza&#x00E7;&#x00E3;o do sistema e pedido de confirma&#x00E7;&#x00E3;o antes de uma a&#x00E7;&#x00E3;o sens&#x00ED;vel</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;Preenchimento autom&#x00E1;tico de formul&#x00E1;rios e face id</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;Feedback do usu&#x00E1;rio e mensagem de erro</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">De acordo com os conceitos das heur&#x00ED;sticas que tratam sobre Reconhecer, diagnosticar e se recuperar erros<br /> e Reconhecimento em vez de recorda&#x00E7;&#x00E3;o, s&#x00E3;o exemplos dessas, respectivamente:</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;Mensagem de erro clara e objetiva e barra de busca no topo da p&#x00E1;gina, como no padr&#x00E3;o de sites e-commerce</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;Mensagem de confirma&#x00E7;&#x00E3;o antes de a&#x00E7;&#x00E3;o sens&#x00ED;vel e preenchimento autom&#x00E1;tico</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;Breadcrumbs e atalhos de acesso ao sistema</li></ol></li></ol>
 </div>
-
 </div>
 
 <div class="Feedback" id="FeedbackDiv">
 <div class="FeedbackText" id="FeedbackContent"></div>
-<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;" style="padding-right:20px;padding-left:20px; margin-bottom: 20px">&#160;OK&#160;</button>
 </div>
 
-<!-- BeginBottomNavButtons -->
-
-
-<div class="NavButtonBar" id="BottomNavBar">
-
-
-
-
-<button class="NavButton" onclick="location='contents.htm'; return false;"> Index </button>
-
-
-
-<button class="NavButton" onclick="location='nextpage.htm'; return false;">=&gt;</button>
-
-
+<div class="btn_certificado ativo">
+	<a href="certificado.html">
+	<button style="padding-right:20px;padding-left:20px;">Acessar certificado</button>
+	</a>
 </div>
-
-
-
-<!-- EndBottomNavButtons -->
-
-<!-- BeginSubmissionForm -->
-
-<!-- EndSubmissionForm -->
-
+</div>
 </body>
-
 </html>
